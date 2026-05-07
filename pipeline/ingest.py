@@ -18,7 +18,8 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct, VectorParams, Distance
 import pypdf
 
-load_dotenv()
+from pathlib import Path
+load_dotenv(Path(__file__).resolve().parents[1] / ".env")
 
 PROJECT_ID     = os.environ["GCP_PROJECT_ID"]
 LOCATION       = os.environ["GCP_LOCATION"]

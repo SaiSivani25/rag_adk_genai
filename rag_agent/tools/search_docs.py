@@ -7,7 +7,8 @@ from google.genai import types
 from qdrant_client import QdrantClient
 from google.adk.tools import ToolContext
 
-load_dotenv()
+from pathlib import Path
+load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 
 PROJECT_ID     = os.environ["GCP_PROJECT_ID"]
 LOCATION       = os.environ["GCP_LOCATION"]
